@@ -49,4 +49,4 @@ int main(int argc, char** argv) {
 //#define __W_STOPCODE(sig)       ((sig) << 8 | 0x7f)
 //#define __W_CONTINUED           0xffff
 //#define __WCOREFLAG             0x80
-*/
+

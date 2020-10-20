@@ -20,11 +20,13 @@ int main() {
         /* the child process */
         printf("In child process, PID = %d, PPID = %d. ", getpid(), getppid());
         printf("\n");
-        
+        //Situation 1: Program run normally.
         // ----- A -----
+	//Situation 2: Parent will wait until subProcess ended.
 	sleep(3);
         // ----- B -----
         //exit(0);
+	//Situation 3: Program run normally.
     } else {
         /* the parent process */
         printf("In parent process, child's PID = %d. ", pid);
@@ -35,6 +37,7 @@ int main() {
         
         // ----- C -----
         //wait(NULL);
+	//Situation 4: SubProcess's Parent PID equals to 1 because of the early end of its parent process.
     }
 
     printf("Before return in main(), PID = %d, PPID = %d. ", getpid(), getppid());
